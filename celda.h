@@ -8,13 +8,16 @@
 #ifndef CELDA_H_
 #define CELDA_H_
 
+#include "espia.h"
+
+
 typedef enum {
 	INACTIVA,
 	LIBRE,
 
 }EstadoDeCelda;
 
-class celda{
+class Celda{
 
 private :
 	EstadoDeCelda estado;
@@ -24,8 +27,8 @@ private :
 
 public :
 
-	celda();
-	virtual ~celda();
+	Celda();
+	~Celda();
 	EstadoDeCelda getEstadoCelda();
 	void setEstadoCelda(EstadoDeCelda nuevoEstado);
 	Espia* getEspia();
@@ -34,7 +37,7 @@ public :
 	void setTesoro(Tesoro* nuevoTesoro);
 	TesoroMina* getTesoroMina();
 	void setTesoroMina(TesoroMina* nuevoTesoroMina);
-}
+};
 
 
 

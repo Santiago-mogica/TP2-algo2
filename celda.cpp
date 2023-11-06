@@ -9,20 +9,20 @@
 #include <iostream>
 #include <stdexcept>
 
-celda::celda(){
+Celda::Celda(){
 	this -> estado = LIBRE;
 	this ->espia = NULL;
 	this ->tesoro = NULL;
 	this ->tesoroMina = NULL;
 }
 
-celda:: ~celda();
+//irtual Celda:: ~Celda();
 
-EstadoDeCelda celda::getEstadoCelda(){
+EstadoDeCelda Celda::getEstadoCelda(){
 	return this -> estado;
 }
 
-void setEstadoCelda(EstadoDeCelda nuevoEstado){
+void Celda::setEstadoCelda(EstadoDeCelda nuevoEstado){
 	if (nuevoEstado == LIBRE || nuevoEstado == INACTIVA ){
 		this-> estado = nuevoEstado;
 		}
@@ -31,7 +31,7 @@ void setEstadoCelda(EstadoDeCelda nuevoEstado){
 	}
 }
 
-Espia* getEspia(){
+Espia* Celda::getEspia(){
 	if (!(this->espia)){
 		return this -> espia;
 	}
@@ -40,7 +40,7 @@ Espia* getEspia(){
 	}
 }
 
-void setEspia(Espia* nuevoEspia){
+void Celda::setEspia(Espia* nuevoEspia){
 	if (!nuevoEspia){
 		this->espia = nuevoEspia;
 	}
@@ -50,7 +50,7 @@ void setEspia(Espia* nuevoEspia){
 }
 
 
-Tesoro* getTesoro(){
+Tesoro* Celda::getTesoro(){
 	if (!(this->tesoro)){
 			return this -> tesoro;
 		}
@@ -59,7 +59,7 @@ Tesoro* getTesoro(){
 		}
 }
 
-void setTesoro(Tesoro* nuevoTesoro){
+void Celda::setTesoro(Tesoro* nuevoTesoro){
 	if (!nuevoTesoro){
 			this->tesoro = nuevoTesoro;
 		}
@@ -68,7 +68,7 @@ void setTesoro(Tesoro* nuevoTesoro){
 		}
 }
 
-TesoroMina* getTesoroMina(){
+TesoroMina* Celda::getTesoroMina(){
 	if (!(this->tesoroMina)){
 				return this -> tesoroMina;
 			}
@@ -77,13 +77,13 @@ TesoroMina* getTesoroMina(){
 			}
 }
 
-void setTesoroMina(TesoroMina* nuevoTesoroMina){
+void Celda::setTesoroMina(TesoroMina* nuevoTesoroMina){
 	if (!nuevoTesoroMina){
-				this->tesoro = nuevoTesoroMina;
+				this->tesoroMina = nuevoTesoroMina;
 			}
-			else{
-				throw std::invalid_argument ("El puntero no puede ser NULL" );
-			}
-	}
+
+	else{
+		throw std::invalid_argument ("El puntero no puede ser NULL" );
+		}
 }
 
