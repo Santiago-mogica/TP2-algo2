@@ -20,7 +20,7 @@ public:
     /* pre: -
      * post: Crea el tesoro con sus coordenadas
      */
-    Tesoro(unsigned int x, unsigned int y, unsigned int z);
+    Tesoro(unsigned int x, unsigned int y, unsigned int z, unsigned int jugadorID);
 
     /* pre: -
      * post: Destruye el tesoro liberando la memoria
