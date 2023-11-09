@@ -7,10 +7,12 @@
 
 #include "Tesoro.h"
 
-Tesoro::Tesoro(unsigned int x, unsigned int y, unsigned int z) {
+Tesoro::Tesoro(unsigned int x, unsigned int y, unsigned int z, unsigned int jugadorID) {
 	this->x = x;
 	this->y = y;
 	this->z = z;
+
+	this->jugadorID = jugadorID;
 }
 
 Tesoro::~Tesoro() {}
