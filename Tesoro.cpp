@@ -27,8 +27,8 @@ unsigned int Tesoro::getCoordenadaZ() {
 	return this->z;
 }
 
-unsigned int Tesoro::getJugador() {
-	return this->jugador;
+unsigned int Tesoro::getJugadorID() {
+	return this->jugadorID;
 }
 
 void Tesoro::setCoordenadaX(unsigned int x) {
