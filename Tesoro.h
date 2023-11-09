@@ -14,7 +14,7 @@ private:
     unsigned int y;
     unsigned int z;
 
-    unsigned int jugador;
+    unsigned int jugadorID;
 
 public:
     /* pre: -
@@ -43,9 +43,9 @@ public:
     unsigned int getCoordenadaZ();
 
     /* pre: -
-     * post: Devuelve el jugador del tesoro
+     * post: Devuelve el ID del jugador del tesoro
      */
-    unsigned int getJugador();
+    unsigned int getJugadorID();
 
     /* pre: -
      * post: Cambia la coordenada X
