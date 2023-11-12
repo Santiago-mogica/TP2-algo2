@@ -1,54 +1,57 @@
+#ifndef UNTITLED4_NODO_H
+#define UNTITLED4_NODO_H
+#include <cstddef>
 
-#ifndef SRC_ESTRUCTURAS_NODO_H_
-#define SRC_ESTRUCTURAS_NODO_H_
+template<class T> class Nodo {
 
-#ifndef NULL
-#define NULL 0
-#endif /* NULL */
-
-template<class T> class Nodo{
 private:
-	T dato;
-	Nodo<T>* siguiente;
+
+    T dato;
+    Nodo<T>* siguiente;
+
 public:
-	Nodo(T valor);
-	bool haySiguiente();
-	Nodo<T>* getSiguiente();
-	void setSiguiente(Nodo<T>* nuevoSig);
-	T getValor();
-	void setValor(T nuevoValor);
-	~Nodo();
+
+    /*
+     * post: el Nodo resulta inicializado con el dato dado
+     *       y sin un Nodo siguiente.
+     */
+    Nodo(T dato) {
+
+        this->dato = dato;
+        this->siguiente = NULL;
+    }
+
+    /*
+     * post: devuelve el valor del dato.
+     */
+    T obtenerDato() {
+
+        return this->dato;
+    }
+
+    /*
+     * post: cambia el valor del dato.
+     */
+    void cambiarDato(T nuevoDato) {
+
+        this->dato = nuevoDato;
+    }
+
+    /*
+     * post: devuelve el siguiente Nodo.
+     */
+    Nodo<T>* obtenerSiguiente() {
+
+        return this->siguiente;
+    }
+
+    /*
+     * post: cambia el siguiente Nodo por nuevoSiguiente.
+     */
+    void cambiarSiguiente(Nodo<T>* nuevoSiguiente) {
+
+        this->siguiente = nuevoSiguiente;
+    }
 };
 
-
-template<class T> Nodo<T>::Nodo(T valor){
-	this->dato = valor;
-	this->siguiente = NULL;
-}
-
-template<class T> bool Nodo<T>::haySiguiente(){
-	return (this->siguiente != NULL);
-}
-
-template<class T> Nodo<T>* Nodo<T>::getSiguiente(){
-	return (this->siguiente);
-}
-
-template<class T> void Nodo<T>::setSiguiente(Nodo<T>* nuevoSig){
-	this->siguiente = nuevoSig;
-}
-
-template<class T> T Nodo<T>::getValor(){
-	return (this->dato);
-}
-
-template<class T> void Nodo<T>::setValor(T nuevoValor){
-	this->dato = nuevoValor;
-}
-
-template<class T> Nodo<T>::~Nodo(){
-
-}
-
-
-#endif /* SRC_ESTRUCTURAS_NODO_H_ */
+#endif //_NODO_H
