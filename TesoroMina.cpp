@@ -42,7 +42,7 @@ void TesoroMina::setCoordenadaY(unsigned int y) {
 	this->y = y;
 }
 
-void TesoroMina::setCoordenadaX(unsigned int z) {
+void TesoroMina::setCoordenadaZ(unsigned int z) {
 	this->z = z;
 }
 
