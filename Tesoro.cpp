@@ -41,6 +41,6 @@ void Tesoro::setCoordenadaY(unsigned int y) {
 	this->y = y;
 }
 
-void Tesoro::setCoordenadaX(unsigned int z) {
+void Tesoro::setCoordenadaZ(unsigned int z) {
 	this->z = z;
 }
